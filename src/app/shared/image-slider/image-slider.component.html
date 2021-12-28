@@ -1,5 +1,26 @@
-Slider works
 <div class="carousel">
+  <carousel
+    [cellsToShow]="1.6"
+    [autoplay]="true"
+    [loop]="true"
+    [autoplayInterval]="2000"
+    [dots]="true"
+    [arrowsTheme]="'dark'"
+    [objectFit]="'cover'"
+  >
+    <div class="carousel-cell">
+      <img src="assets/images/slider-badging.jpg" />
+    </div>
+    <div class="carousel-cell">
+      <img src="assets/images/slider-badag.jpg" />
+    </div>
+
+    <div class="carousel-cell">
+      <img src="assets/images/slider-badging.jpg" />
+    </div>
+  </carousel>
+
+  <!-- <carousel #myCarousel [images]="slides"> </carousel> -->
   <!-- <mat-carousel timings="250ms ease-in" [autoplay]="true" [interval]="5000" color="accent" maxWidth="auto" [proportion]="25" [slides]="3" [loop]="true" [hideArrows]="false" [hideIndicators]="false" [useKeyboard]="true" [useMouseWheel]="false" orientation="ltr">
         <mat-carousel-slide #matCarouselSlide *ngFor="let slide of slides; let i = index" [image]="slide.image" overlayColor="#00000040" [hideOverlay]="false"></mat-carousel-slide>
     </mat-carousel> -->
