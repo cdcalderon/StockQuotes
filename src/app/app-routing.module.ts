@@ -1,10 +1,30 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'signals-dashboard',
+    pathMatch: 'full',
+  },
+  {
+    path: 'signals-dashboard',
+    loadChildren: () =>
+      import('./signals-dashboard/signals-dashboard.module').then(
+        (m) => m.SignalsDashboardModule
+      ),
+  },
+  // {
+  //   path: 'quote-fundamentals',
+  //   loadChildren: () =>
+  //     import('./quote-fundamentals/quote-fundamentals.module').then(
+  //       (m) => m.QuoteFundamentalsModule
+  //     ),
+  // },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
