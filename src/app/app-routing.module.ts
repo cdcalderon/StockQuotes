@@ -14,13 +14,13 @@ const routes: Routes = [
         (m) => m.SignalsDashboardModule
       ),
   },
-  // {
-  //   path: 'quote-fundamentals',
-  //   loadChildren: () =>
-  //     import('./quote-fundamentals/quote-fundamentals.module').then(
-  //       (m) => m.QuoteFundamentalsModule
-  //     ),
-  // },
+  {
+    path: 'quote-fundamentals',
+    loadChildren: () =>
+      import('./quote-fundamentals/quote-fundamentals.module').then(
+        (m) => m.QuoteFundamentalsModule
+      ),
+  },
 ];
 
 @NgModule({
